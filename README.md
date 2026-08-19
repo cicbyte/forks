@@ -1,3 +1,5 @@
+
+
 # Forks
 
 > 本地 Git 仓库管理与镜像加速工具 — Web 界面管理 GitHub/Gitee 仓库，局域网内加速克隆。
@@ -5,7 +7,7 @@
 [English](./README.en.md) | **中文**
 
 [![Docker Image CI](https://github.com/cicbyte/forks/actions/workflows/docker-image.yml/badge.svg)](https://github.com/cicbyte/forks/actions/workflows/docker-image.yml)
-[![Release](https://img.shields.io/github/v/release/cicbyte/forks?style=flat&logo=github&color=green)](https://github.com/cicbyte/forks/releases/latest)
+[![Release](https://img.shields.io/github/v-release/cicbyte/forks?style=flat&logo=github&color=green)](https://github.com/cicbyte/forks/releases/latest)
 [![Go](https://img.shields.io/badge/Go-1.25-00ADD8?logo=go&logoColor=white)](https://go.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Docker Pulls](https://img.shields.io/badge/ghcr.io-cicbyte%2Fforks-24292f?logo=docker&logoColor=white)](https://github.com/cicbyte/forks/pkgs/container/forks)
@@ -133,6 +135,7 @@ forks-cli clone http://<server-ip>:8080/git/github/author/repo.git
 docker run -d \
   -p 8080:8080 \
   -e TZ=Asia/Shanghai \
+  -e FORKS_HOME=/data \
   -v ./data:/data \
   ghcr.io/cicbyte/forks:latest
 ```
